@@ -16,8 +16,22 @@
         .wrapper { max-width: 500px; margin: 0 auto; padding: 20px; }
         h1 { font-size: 1.5rem; margin-bottom: 10px; }
         p { color: #ccc; font-size: 0.9rem; margin-bottom: 30px; }
-        .video-wrapper { width: 100%; border-radius: 15px; overflow: hidden; border: 1px solid #333; }
-        .video-wrapper img { width: 100%; display: block; }
+        
+        .video-wrapper {
+            width: 100%;
+            /* ここで高さを指定して「先に場所を確保」します */
+            aspect-ratio: 16 / 9; 
+            background-color: #1a1a1a;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #333;
+        }
+        .video-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* 画像を綺麗に枠に収める */
+            display: block;
+        }
     </style>
 </head>
 <body>
@@ -26,7 +40,7 @@
         <p>視聴は自己責任でお願いします。</p>
         <div class="video-wrapper">
             <a href="https://lite.tiktok.com/t/ZS921AyFKdcrD-Ccirv/">
-                <img src="https://github.com/0721live/my-link/blob/main/B3603F48-F05E-44CC-9F78-485833FB4DEC.png?raw=true" alt="拡散動画">
+                <img src="https://github.com/0721live/my-link/blob/main/B3603F48-F05E-44CC-9F78-485833FB4DEC.png?raw=true" alt="拡散動画" loading="eager">
             </a>
         </div>
     </div>
